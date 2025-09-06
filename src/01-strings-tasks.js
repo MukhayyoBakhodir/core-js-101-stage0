@@ -233,8 +233,7 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  // ROT13: shift A-Z/a-z by 13
-  return str.replace(/[A-Za-z]/g, function (c) {
+  return str.replace(/[A-Za-z]/g, (c) => {
     return String.fromCharCode(
       c <= 'Z'
         ? ((c.charCodeAt(0) - 65 + 13) % 26) + 65
